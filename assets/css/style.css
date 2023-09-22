@@ -1,6 +1,7 @@
 :root {
-  --heading-color: #e866ec;
-  --p-color: white;
+  --light-purple: #e866ec;
+  --space: #33393f;
+  --white: white;
 }
 
 * {
@@ -10,7 +11,7 @@
 }
 
 body {
-  background-color: #33393f;
+  background-color: var(--space);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,11 +19,40 @@ body {
 }
 
 h1, h2, h3 {
-  color: var(--heading-color);
+  color: var(--light-purple);
   text-align: center;
 }
 
-header p {
-  color: var(--p-color);
+header p, pre {
+  color: var(--white);
 
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+pre {
+  padding: 10px;
+}
+
+.card {
+  border: 2px dashed var(--white);
+  align-items: center;
+  margin: 15px;
+}
+
+.card header {
+  position: relative;
+  margin-top: -20px;
+  border: 2px solid var(--white);
+  background-color: var(--space);
+  width: 90%;
+  z-index: 1;
+}
+
+.card p {
+  color: var(--light-purple);
 }
