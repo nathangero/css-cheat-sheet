@@ -2,6 +2,8 @@
   --light-purple: #e866ec;
   --space: #33393f;
   --white: white;
+
+  --border-radius: 10px;
 }
 
 * {
@@ -23,31 +25,45 @@ h1, h2, h3 {
   text-align: center;
 }
 
-header p, pre {
+header p {
+  text-align: center;
   color: var(--white);
-
+  margin: 10px 10%;
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
+  justify-content: center;
 }
 
 pre {
+  position: relative;
+  bottom: 0;
+  margin: 20px;
   padding: 10px;
+  color: var(--white);
+  border-radius: var(--border-radius);
+  background-image: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+  );
 }
 
 .card {
   border: 2px dashed var(--white);
   align-items: center;
   margin: 15px;
+  flex: 0 1 400px;
 }
 
 .card header {
   position: relative;
   margin-top: -20px;
+  margin-left: 20px;
   border: 2px solid var(--white);
+  border-radius: var(--border-radius);
   background-color: var(--space);
   width: 90%;
   z-index: 1;
@@ -55,4 +71,5 @@ pre {
 
 .card p {
   color: var(--light-purple);
+  padding: 10px;
 }
