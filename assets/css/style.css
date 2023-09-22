@@ -38,24 +38,6 @@ main {
   justify-content: center;
 }
 
-pre {
-  position: relative;
-  bottom: 0;
-  margin: 20px;
-  padding: 10px;
-  color: var(--white);
-  border-radius: var(--border-radius);
-  background-image: linear-gradient(
-    rgba(232, 102, 236, 0.3) 0%,
-    rgba(232, 102, 236, 0.6) 100%
-  );
-  flex-grow: 1;
-}
-
-pre:active {
-  user-select: all;
-}
-
 .card {
   border: 2px dashed var(--white);
   align-items: center;
@@ -74,7 +56,30 @@ pre:active {
   z-index: 1;
 }
 
+.card, .card header {
+  border-radius: var(--border-radius);
+  transition: all 0.5s ease-in-out;
+}
+
 .card p {
   color: var(--light-purple);
   padding: 10px;
+}
+
+.card pre {
+  display: flex;
+  overflow: auto;
+  margin: 20px;
+  tab-size: 4;
+  padding: 20px;
+  color: var(--white);
+  border-radius: var(--border-radius);
+  background-image: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+  );
+}
+
+.card pre:active {
+  user-select: all;
 }
